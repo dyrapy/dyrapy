@@ -4,6 +4,11 @@
 
 The project was started in 2020 after a Tchê Linux presentation about Python, Data Science, and Open Data.
 
+
+
+https://colab.research.google.com/drive/1QE4dWr3oCt72Z2U4cfOc1QhUFIwimKIj?usp=sharing
+
+
 ```
 git clone https://github.com/dyrapy/dyrapy.git
 cd dyrapy/examples
