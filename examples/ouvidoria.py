@@ -1,3 +1,5 @@
+#from dyrapy import datasets
+
 print('Open file...')
 import pandas
 data = pandas.read_csv('../dyrapy/datasets/data/ouvidoria.csv', sep=';', na_values=".")
@@ -25,8 +27,8 @@ data['previsto'] = (data.datafinalprevista - data.dataregistro).astype('timedelt
 data['realizado'] = (data.dataenvioresposta - data.dataregistro).astype('timedelta64[D]')
 data['delta'] = data.previsto - data.realizado
 
-data.boxplot()
-
+bp = data.boxplot()
+bp.set_title('Número de dias previstos e realizados, com variação entre previsto e realizado (delta).' )
 from pandas.plotting import scatter_matrix
 scatter_matrix(data[['previsto', 'realizado', 'delta']])
 
