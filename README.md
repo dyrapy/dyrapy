@@ -9,6 +9,8 @@ The project was started in 2020 after a Tchê Linux presentation about Python, D
 ## Installation as Developer
 
 ```
+python -m venv .venv
+. .venv/bin/activate
 git clone https://github.com/dyrapy/dyrapy.git
 cd dyrapy
 python setup.py develop
