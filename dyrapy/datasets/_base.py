@@ -6,6 +6,7 @@ Base IO code for all datasets
 # Copyright (c) 2020 Marco Mangan <marco.mangan@gmail.com>
 # License: BSD 3 clause
 import pandas
+from os.path import dirname, exists, expanduser, isdir, join, splitext
 
 def load_ouvidoria():
     """Load and return the dadosabertos.poa.br ouvidoria dataset.
@@ -19,7 +20,10 @@ def load_ouvidoria():
     >>> data.head()
 
     """
-    data = pandas.read_csv('../dyrapy/datasets/data/ouvidoria.csv', sep=';', na_values=".")
+    module_path = dirname(__file__)
+    ouvidoria_csv_filename = join(module_path, 'data', 'ouvidoria.csv')
+
+    data = pandas.read_csv(ouvidoria_csv_filename, sep=';', na_values=".")
 
     print('Data head...')
     print(data.head())
