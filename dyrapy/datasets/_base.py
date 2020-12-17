@@ -6,7 +6,7 @@ Base IO code for all datasets
 # Copyright (c) 2020 Marco Mangan <marco.mangan@gmail.com>
 # License: BSD 3 clause
 import pandas
-from os.path import dirname, exists, expanduser, isdir, join, splitext
+from os.path import dirname, join
 
 def load_ouvidoria():
     """Load and return the dadosabertos.poa.br ouvidoria dataset.
