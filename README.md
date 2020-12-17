@@ -1,4 +1,4 @@
-![example workflow name](https://github.com/dyrapy/dyrapy/workflows/python-package.yml/badge.svg)
+![Python_package_workflow](https://github.com/dyrapy/dyrapy/workflows/Python%20package/badge.svg)
 
 # dyrapy
 
