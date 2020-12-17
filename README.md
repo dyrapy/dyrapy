@@ -1,3 +1,5 @@
+![example workflow name](https://github.com/dyrapy/dyrapy/workflows/Greet%20Everyone/badge.svg)
+
 # dyrapy
 
 *dyrapy* is a Python example for data science built on top of pandas.
