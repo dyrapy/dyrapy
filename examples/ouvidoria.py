@@ -1,3 +1,6 @@
+# Copyright (c) 2020 Marco Mangan <marco.mangan@gmail.com>
+# License: BSD 3 clause
+
 import matplotlib.pyplot as plt
 from pandas.plotting import scatter_matrix
 from dyrapy.datasets import load_ouvidoria

@@ -1,10 +1,10 @@
+# Copyright (c) 2020 Marco Mangan <marco.mangan@gmail.com>
+# License: BSD 3 clause
+
 """
 Base IO code for all datasets
 """
 
-
-# Copyright (c) 2020 Marco Mangan <marco.mangan@gmail.com>
-# License: BSD 3 clause
 import pandas
 from os.path import dirname, join
 
