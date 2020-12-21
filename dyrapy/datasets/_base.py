@@ -8,6 +8,7 @@ Base IO code for all datasets
 import pandas
 from os.path import dirname, join
 
+
 def load_ouvidoria():
     """Load and return the dadosabertos.poa.br ouvidoria dataset.
 
@@ -50,3 +51,19 @@ def load_ouvidoria():
 
     return data
 
+
+def load_escolas():
+    """
+
+    Returns
+    -------
+
+    """
+    module_path = dirname(__file__)
+    cadastro_csv_filename = join(module_path, 'data', 'cadastro_escolas.csv')
+    matriculas_csv_filename = join(module_path, 'data', 'matriculas_escolas.csv')
+
+    data_cadastro = pandas.read_csv(cadastro_csv_filename, sep=';', na_values=".")
+    data_matriculas = pandas.read_csv(matriculas_csv_filename, sep=';', na_values=".")
+
+    return data_cadastro, data_matriculas

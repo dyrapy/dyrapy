@@ -5,6 +5,9 @@ import matplotlib.pyplot as plt
 from pandas.plotting import scatter_matrix
 from dyrapy.datasets import load_ouvidoria
 
+print('Dyrapy Examples - Ouvidoria Dataset')
+print('===================================')
+
 print('Open file...')
 data = load_ouvidoria()
 
