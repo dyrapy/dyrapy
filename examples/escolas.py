@@ -7,5 +7,13 @@ print('Dyrapy Examples - Escolas Dataset')
 print('=================================')
 
 print('Open files...')
-c, m = load_escolas()
+data_cadastro, data_matriculas = load_escolas()
+
+print('Data head...')
+print(data_cadastro.head())
+print(data_matriculas.head())
+
+print('Data describe..')
+print(data_cadastro.describe())
+print(data_matriculas.describe())
 

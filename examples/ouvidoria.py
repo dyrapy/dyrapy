@@ -11,6 +11,12 @@ print('===================================')
 print('Open file...')
 data = load_ouvidoria()
 
+print('Data head...')
+print(data.head())
+
+print('Data describe..')
+print(data.describe())
+
 bp = data.boxplot()
 bp.set_title('Número de dias previstos e realizados, com variação entre previsto e realizado (delta).')
 
