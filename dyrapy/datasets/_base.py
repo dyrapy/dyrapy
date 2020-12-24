@@ -10,8 +10,7 @@ import pandas
 from os.path import dirname, join
 
 logger = logging.getLogger(__name__)
-logger.basicConfig(encoding='utf-8', level=logging.INFO)
-
+logger.setLevel(logging.INFO)
 
 def load_ouvidoria():
     """Load and return the dadosabertos.poa.br ouvidoria dataset.
