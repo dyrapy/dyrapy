@@ -66,4 +66,18 @@ def load_escolas():
     data_cadastro = pandas.read_csv(cadastro_csv_filename, sep=';', na_values=".")
     data_matriculas = pandas.read_csv(matriculas_csv_filename, sep=';', na_values=".")
 
+    print('Data head...')
+    print(data_cadastro.head())
+    print()
+    print(data_matriculas.head())
+
+    print('Data describe..')
+    print(data_cadastro.describe())
+    print()
+    print(data_matriculas.describe())
+
+    print('Recodind dates..')
+    data_cadastro.data_extracao = pandas.to_datetime(data_cadastro.data_extracao)
+    data_matriculas.data_extracao = pandas.to_datetime(data_matriculas.data_extracao)
+
     return data_cadastro, data_matriculas
