@@ -19,8 +19,8 @@ git clone https://github.com/dyrapy/dyrapy.git
 cd dyrapy
 python setup.py develop
 cd examples
-python ouvidoria.py
-python escolas.py
+python --log=INFO ouvidoria.py
+python --log=INFO escolas.py
 ```
 
 ## Tchê Linux Live 2020 
