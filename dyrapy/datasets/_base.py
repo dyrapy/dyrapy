@@ -22,6 +22,8 @@ def load_ouvidoria():
     >>> data.head()
 
     """
+    logging.basicConfig(encoding='utf-8', level=logging.INFO)
+
     module_path = dirname(__file__)
     ouvidoria_csv_filename = join(module_path, 'data', 'ouvidoria.csv')
 
@@ -60,6 +62,8 @@ def load_escolas():
     -------
 
     """
+    logging.basicConfig(encoding='utf-8', level=logging.INFO)
+
     module_path = dirname(__file__)
     cadastro_csv_filename = join(module_path, 'data', 'cadastro_escolas.csv')
     matriculas_csv_filename = join(module_path, 'data', 'matriculas_escolas.csv')
@@ -73,7 +77,6 @@ def load_escolas():
 
     logging.info('Data describe..')
     logging.info(data_cadastro.describe())
-    logging.info()
     logging.info(data_matriculas.describe())
 
     logging.info('Recodind dates..')
