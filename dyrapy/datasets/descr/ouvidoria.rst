@@ -1,4 +1,4 @@
-.. _iris_dataset:
+.. _ouvidoria_dataset:
 
 Ouvidoria dataset
 -----------------

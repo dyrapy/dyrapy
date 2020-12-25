@@ -1,4 +1,4 @@
-.. _iris_dataset:
+.. _escolas_dataset:
 
 Escolas dataset
 -----------------

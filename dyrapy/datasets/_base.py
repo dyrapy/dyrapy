@@ -5,12 +5,18 @@
 Base IO code for all datasets
 """
 import logging
+from os.path import dirname, join
 
 import pandas
-from os.path import dirname, join
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
+ch = logging.StreamHandler()
+ch.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+ch.setFormatter(formatter)
+logger.addHandler(ch)
+
 
 def load_ouvidoria():
     """Load and return the dadosabertos.poa.br ouvidoria dataset.
@@ -68,6 +74,11 @@ def load_escolas():
 
     data_cadastro = pandas.read_csv(cadastro_csv_filename, sep=';', na_values=".")
     data_matriculas = pandas.read_csv(matriculas_csv_filename, sep=';', na_values=".")
+
+    logger.info("Recoding categories...")
+    data_cadastro.dep_administrativa = data_cadastro.dep_administrativa.astype('category')
+    data_cadastro.tipo = data_cadastro.tipo.astype('category')
+    data_cadastro.bairro = data_cadastro.bairro.astype('category')
 
     logger.info('Recoding dates..')
     data_cadastro.data_extracao = pandas.to_datetime(data_cadastro.data_extracao)

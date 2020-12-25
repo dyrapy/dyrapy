@@ -16,4 +16,3 @@ print(data_matriculas.head())
 print('Data describe..')
 print(data_cadastro.describe())
 print(data_matriculas.describe())
-
