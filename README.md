@@ -4,7 +4,7 @@
 
 *dyrapy* is a Python example for data science built on top of pandas.
 
-The project was started in 2020 after a Tchê Linux presentation about Python, Data Science, and Open Data.
+The project was started in 2020 after a [Tchelinux presentation](https://youtu.be/188KGbUR_28) about Python, Data Science, and Open Data.
 
 
 
